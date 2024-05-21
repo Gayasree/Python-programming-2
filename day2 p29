@@ -1,0 +1,20 @@
+def main():
+try:
+a=int(input("Enter a number:"))
+except ValueError:
+  print("Invalid input")
+    return
+    if a<=1:
+    print("Invalid input")
+    return 
+    prime=1
+    i=2
+    while a>1:
+    if a%i==0:
+    prime=i
+    while a%i==0:
+    a/=i
+    i+=1
+    print(prime)
+    if_name_=="_main_":
+main()
