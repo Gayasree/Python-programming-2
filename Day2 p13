@@ -1,0 +1,56 @@
+import math
+# Function definitions
+def addition(a, b): 
+return a + b 
+def subtraction(a, b): 
+return a - b 
+def multiplication(a, b): 
+return a * b 
+def division(a, b): 
+if b != 0: 
+return a // b 
+# Use integer division to get integer result
+else: 
+print("Error: Division by zero!") 
+return None def modulus(a, b):
+if b != 0:
+return a % b 
+else: 
+print("Error: Modulus by zero!")
+return None def average(a, b):
+return (a + b) / 2 
+def power(base, exponent): 
+return int(math.pow(base, exponent))
+# Menu 
+print("Choose an operation:") 
+print("1 - Addition") 
+print("2 - Subtraction") 
+print("3 - Multiplication") 
+print("4 - Division") 
+print("5 - Modulus") 
+print("6 - Average") 
+print("7 - Power") 
+# Input 
+choice = int(input("Enter your choice: ")) 
+num1, num2 = map(int, input("Enter two integers: ").split())
+# Perform selected operation 
+if choice == 1:
+print("Result:", addition(num1, num2))
+elif choice == 2: 
+print("Result:", subtraction(num1, num2))
+elif choice == 3: 
+print("Result:", multiplication(num1, num2)) 
+elif choice == 4: 
+result = division(num1, num2)
+if result is not None: 
+print("Result:", result) 
+elif choice == 5: 
+result = modulus(num1, num2) 
+if result is not None: 
+print("Result:", result)
+elif choice == 6: 
+print("Result:", average(num1, num2))
+elif choice == 7: 
+print("Result:", power(num1, num2)) 
+else: 
+print("Invalid choice!") 
