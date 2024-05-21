@@ -1,0 +1,6 @@
+n=int(input())
+  if(n==0):
+  print("Invalid input")
+  else:
+  i=n*n*n*n*n*n
+  print(i)
