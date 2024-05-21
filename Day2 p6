@@ -1,0 +1,24 @@
+def check_insurance_eligibility(married, is_male, age): 
+"""Function to check insurance eligibility.""" 
+if married: 
+return True 
+elif not married and is_male and age > 30:
+return True 
+elif not married and not is_male and age > 25:
+return True 
+else:
+return False 
+def main():
+"""Main function.""" 
+print("Welcome to the Insurance Eligibility Checker!") 
+try: 
+married = input("Is the driver married? (yes/no): ").lower() == 'yes'
+is_male = input("Is the driver male? (yes/no): ").lower() == 'yes'
+age = int(input("Enter the age of the driver: "))
+if check_insurance_eligibility(married, is_male, age): 
+print("The driver is eligible for insurance.") 
+else: 
+print("Sorry, the driver is not eligible for insurance.") 
+except ValueError:
+print("Invalid input. Please enter valid values.")
+if __name__ == "__main__": main() 
