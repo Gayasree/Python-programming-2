@@ -1,0 +1,9 @@
+def find_coincide_time(hours):
+if hours < 0 or hours > 12: 
+return "Invalid input"
+angle_difference = 330 
+coincide_time = (hours * 30) / angle_difference * 60
+return coincide_time 
+# Input hours = int(input("Enter time in hours: "))
+# Calculate coincide time coincide_time = find_coincide_time(hours) 
+print("The time at which the minute hand and hour hand coincide in the next one hour is: {coincide_time} minutes")
