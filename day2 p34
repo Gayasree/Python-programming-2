@@ -1,0 +1,13 @@
+def fibonacci_reverse(n):
+fib_sequence=[0,1]
+  while len(fib_sequence)<n:
+  next_term=fib_sequence[-1]+fib_sequence[-2]
+  fib_sequence.append(next_term)
+  for i in range(n-1,-1,-1):
+  print(fib_sequence[i],end=" ")
+  num+term=int(input("Enter the number of terms:"))
+  if num_term<=0:
+  print("Please enter a positive integer")
+  else:
+  print("Fibonacci series in reverse order:")
+  fibonacci_reverse(num_term)
