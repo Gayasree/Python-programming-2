@@ -1,0 +1,11 @@
+def draw_chessboard(size): 
+for row in range(size): 
+for col in range(size): 
+if (row + col) % 2 == 0: 
+print("â–¡", end=" ") #
+printing white cells
+else:
+print("â– ", end=" ") 
+# printing black cells print() 
+size = 8 
+draw_chessboard(size)
