@@ -1,8 +1,10 @@
-n=int(input())
-count=0
-for i in range(1,10):
-    for j in range(2,i/2):
-        if(i%j==0):
-            count=count+1
-    if(count==0 and i!=1):
-        print(i)
+def fibonacciseries(n):
+fib_sequence=[0,1]
+for i in range(2,n):
+fib_sequence.append(fib_sequence[-1]+fib_sequence[-2])
+return fib_sequence[:n]
+num_terms=int(input("Enter the number of terms: "))
+if num_terms<=0:
+print("Please enter a positive number")
+else:
+print("Fibonacci series:",fibonacciseries(num_terms))
