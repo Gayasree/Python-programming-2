@@ -1,0 +1,15 @@
+def extract_last_two_digits(n):
+"""Function to extract the last two digits of a given integer.""" 
+if n < 10:
+return "Number should have more than two digits." 
+else: 
+return n % 100 def main(): 
+"""Main function.""" 
+print("Welcome to the Last Two Digits Extractor!") 
+try: 
+n = int(input("Enter an integer greater than 99: ")) 
+last_two_digits = extract_last_two_digits(n) 
+print(f"The last two digits of {n} are: {last_two_digits}") 
+except ValueError:
+print("Invalid input. Please enter an integer greater than 99.") 
+if __name__ == "__main__": main() 
