@@ -1,0 +1,16 @@
+def is_rectangle_possible(a, b, c, d):
+# Condition 1: 
+Check if opposite sides are equal sides = [a, b, c, d] 
+sides.sort() 
+# Sorting to easily find opposite sides 
+if sides[0] == sides[1] and sides[2] == sides[3]: 
+# Condition 2: 
+Check if sum of squares of any two adjacent sides is equal to the sum of squares of the other two adjacent sides 
+if sides[0] ** 2 + sides[2] ** 2 == sides[1] ** 2 + sides[3] ** 2: 
+return "Yes" 
+return "No" 
+# Input side_lengths = input("Enter rectangle four sides of length: ").split()
+a, b, c, d = map(int, side_lengths)
+# Check if rectangle is possible 
+result = is_rectangle_possible(a, b, c, d) 
+print(result)
