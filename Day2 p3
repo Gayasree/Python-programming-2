@@ -1,0 +1,9 @@
+def check_age(age): 
+driving_age = 16 
+if age >= driving_age:
+print("You are old enough to drive.")
+else: 
+print("You are not old enough to drive.")
+# Example usage:
+age = int(input("Enter your age: "))
+check_age(age) 
