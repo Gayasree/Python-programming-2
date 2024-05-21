@@ -1,0 +1,21 @@
+def calculate_bill(units_consumed): 
+if units_consumed <= 199: 
+charge_per_unit = 1.20 
+elif 200 <= units_consumed < 400:
+charge_per_unit = 1.50 
+elif 400 <= units_consumed < 600: 
+charge_per_unit = 1.80 
+else: 
+charge_per_unit = 2.00
+total_bill = units_consumed * charge_per_unit 
+if total_bill > 400: 
+surcharge = total_bill * 0.15 
+total_bill += surcharge
+# Ensure minimum bill of Rs. 100
+total_bill = max(total_bill, 100)
+return total_bill
+# Input 
+units_consumed = int(input("Enter the units consumed: "))
+# Calculate and print the bill 
+bill_amount = calculate_bill(units_consumed)
+print("Total amount to pay: Rs.", format(bill_amount, ".2f"))
